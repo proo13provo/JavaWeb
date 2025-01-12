@@ -185,26 +185,6 @@
           </c:if>
         </div>
         <div class="mb-3">
-          <label for="product-pages" class="form-label">Số trang <span class="text-danger">*</span></label>
-          <input type="number"
-                 class="form-control ${not empty requestScope.violations.pagesViolations
-                   ? 'is-invalid' : (not empty requestScope.product.pages ? 'is-valid' : '')}"
-                 id="product-pages"
-                 name="pages"
-                 value="${requestScope.product.pages}"
-                 min="1"
-                 required>
-          <c:if test="${not empty requestScope.violations.pagesViolations}">
-            <div class="invalid-feedback">
-              <ul class="list-unstyled">
-                <c:forEach var="violation" items="${requestScope.violations.pagesViolations}">
-                  <li>${violation}</li>
-                </c:forEach>
-              </ul>
-            </div>
-          </c:if>
-        </div>
-        <div class="mb-3">
           <label for="product-publisher" class="form-label">Nhà xuất bản <span class="text-danger">*</span></label>
           <input type="text"
                  class="form-control ${not empty requestScope.violations.publisherViolations

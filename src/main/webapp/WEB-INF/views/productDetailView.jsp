@@ -69,9 +69,6 @@
           <dt class="col-md-3">Tác giả</dt>
           <dd class="col-md-9">${requestScope.product.author}</dd>
 
-          <dt class="col-md-3">Số trang</dt>
-          <dd class="col-md-9">${requestScope.product.pages}</dd>
-
           <dt class="col-md-3">Nhà xuất bản</dt>
           <dd class="col-md-9">${requestScope.product.publisher}</dd>
 

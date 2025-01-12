@@ -16,14 +16,14 @@ import java.util.Optional;
 public interface ProductDAO extends DAO<Product> {
     @Override
     @SqlUpdate("INSERT INTO product VALUES (default, :name, :price, :discount, :quantity, " +
-               ":totalBuy, :author, :pages, :publisher, :yearPublishing, :description, " +
+               ":totalBuy, :author, :publisher, :yearPublishing, :description, " +
                ":imageName, :shop, :createdAt, :updatedAt, :startsAt, :endsAt)")
     @GetGeneratedKeys("id")
     long insert(@BindBean Product product);
 
     @Override
     @SqlUpdate("UPDATE product SET name = :name, price = :price, discount = :discount, quantity = :quantity, " +
-               "totalBuy = :totalBuy, author = :author, pages = :pages, publisher = :publisher, " +
+               "totalBuy = :totalBuy, author = :author, publisher = :publisher, " +
                "yearPublishing = :yearPublishing, description = :description, imageName = :imageName, " +
                "shop = :shop, updatedAt = :updatedAt, startsAt = :startsAt, endsAt = :endsAt WHERE id = :id")
     void update(@BindBean Product product);

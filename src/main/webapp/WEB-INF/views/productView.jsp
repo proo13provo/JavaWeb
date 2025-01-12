@@ -99,9 +99,6 @@
           <dt class="col-xl-4 col-sm-5 col-6">Tác giả</dt>
           <dd class="col-xl-8 col-sm-7 col-6">${requestScope.product.author}</dd>
 
-          <dt class="col-xl-4 col-sm-5 col-6">Số trang</dt>
-          <dd class="col-xl-8 col-sm-7 col-6">${requestScope.product.pages}</dd>
-
           <dt class="col-xl-4 col-sm-5 col-6">Nhà xuất bản</dt>
           <dd class="col-xl-8 col-sm-7 col-6">${requestScope.product.publisher}</dd>
 

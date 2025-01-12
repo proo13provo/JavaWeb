@@ -13,7 +13,6 @@ public class Product {
     private int quantity;
     private int totalBuy;
     private String author;
-    private int pages;
     private String publisher;
     private int yearPublishing;
     @Nullable
@@ -38,7 +37,6 @@ public class Product {
                    int quantity,
                    int totalBuy,
                    String author,
-                   int pages,
                    String publisher,
                    int yearPublishing,
                    @Nullable String description,
@@ -55,7 +53,6 @@ public class Product {
         this.quantity = quantity;
         this.totalBuy = totalBuy;
         this.author = author;
-        this.pages = pages;
         this.publisher = publisher;
         this.yearPublishing = yearPublishing;
         this.description = description;
@@ -121,14 +118,6 @@ public class Product {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
     }
 
     public String getPublisher() {
@@ -218,7 +207,6 @@ public class Product {
                 .add("quantity=" + quantity)
                 .add("totalBuy=" + totalBuy)
                 .add("author='" + author + "'")
-                .add("pages=" + pages)
                 .add("publisher='" + publisher + "'")
                 .add("yearPublishing=" + yearPublishing)
                 .add("description='" + description + "'")

@@ -49,7 +49,6 @@ public class CreateProductServlet extends HttpServlet {
         product.setQuantity(Protector.of(() -> Integer.parseInt(request.getParameter("quantity"))).get(0));
         product.setTotalBuy(Protector.of(() -> Integer.parseInt(request.getParameter("totalBuy"))).get(0));
         product.setAuthor(request.getParameter("author"));
-        product.setPages(Protector.of(() -> Integer.parseInt(request.getParameter("pages"))).get(1));
         product.setPublisher(request.getParameter("publisher"));
         product.setYearPublishing(Protector.of(() -> Integer.parseInt(request.getParameter("yearPublishing"))).get(1901));
         product.setDescription(request.getParameter("description").trim().isEmpty()
@@ -90,10 +89,6 @@ public class CreateProductServlet extends HttpServlet {
                 .isNotNullAndEmpty()
                 .isNotBlankAtBothEnds()
                 .isAtMostOfLength(50)
-                .toList());
-        violations.put("pagesViolations", Validator.of(product.getPages())
-                .isNotNull()
-                .isLargerThan(1, "Số trang")
                 .toList());
         violations.put("publisherViolations", Validator.of(product.getPublisher())
                 .isNotNullAndEmpty()

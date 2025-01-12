@@ -7,7 +7,7 @@
     <groupId>com</groupId>
     <artifactId>gameShop</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>BookShopWeb</name>
+    <name>game Shop</name>
     <packaging>war</packaging>
 
     <properties>
