@@ -17,7 +17,7 @@
   <div class="container">
     <div class="card bg-light">
       <div class="card-body p-5">
-        <h1 class="display-5 mb-5">Quản lý Shop Bán Sách</h1>
+        <h1 class="display-5 mb-5">Quản lý Game Shop</h1>
         <div class="row">
           <div class="col-6 col-lg-3">
             <figure class="card">

@@ -70,10 +70,10 @@
             <strong><i class="bi bi-list"></i> Danh mục sản phẩm</strong>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Sách giáo khoa</a></li>
-            <li><a class="dropdown-item" href="#">Sách khoa học</a></li>
-            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
-            <li><a class="dropdown-item" href="#">Tiểu thuyết</a></li>
+            <li><a class="dropdown-item" href="#">game đối kháng</a></li>
+            <li><a class="dropdown-item" href="#">game kinh dị</a></li>
+            <li><a class="dropdown-item" href="#">game nhập vai</a></li>
+            <li><a class="dropdown-item" href="#">game online</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
