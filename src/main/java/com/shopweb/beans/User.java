@@ -12,6 +12,39 @@ public class User {
     private int gender;
     private String address;
     private String role;
+    private boolean verified;
+
+    private String verificationCode;
+
+    public User(long id, String username, String password, String fullname, String email, String phoneNumber, int gender, String address, String role, boolean verified, String verificationCode) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.fullname = fullname;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.gender = gender;
+        this.address = address;
+        this.role = role;
+        this.verified = verified;
+        this.verificationCode = verificationCode;
+    }
+
+    public boolean isVerified() {
+        return verified;
+    }
+
+    public void setVerified(boolean verified) {
+        this.verified = verified;
+    }
+
+    public String getVerificationCode() {
+        return verificationCode;
+    }
+
+    public void setVerificationCode(String verificationCode) {
+        this.verificationCode = verificationCode;
+    }
 
     public User() {}
 
@@ -109,16 +142,18 @@ public class User {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
-                .add("id=" + id)
-                .add("username='" + username + "'")
-                .add("password='" + password + "'")
-                .add("fullname='" + fullname + "'")
-                .add("email='" + email + "'")
-                .add("phoneNumber='" + phoneNumber + "'")
-                .add("gender=" + gender)
-                .add("address='" + address + "'")
-                .add("role='" + role + "'")
-                .toString();
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", fullname='" + fullname + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", gender=" + gender +
+                ", address='" + address + '\'' +
+                ", role='" + role + '\'' +
+                ", verified=" + verified +
+                ", verificationCode='" + verificationCode + '\'' +
+                '}';
     }
 }

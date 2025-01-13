@@ -15,14 +15,23 @@ import java.util.Optional;
 @RegisterBeanMapper(User.class)
 public interface UserDAO extends DAO<User> {
     @Override
-    @SqlUpdate("INSERT INTO user VALUES (default, :username, :password, :fullname, " +
-               ":email, :phoneNumber, :gender, :address, :role)")
+    @SqlUpdate("INSERT INTO user (username, password, fullname, email, phoneNumber, gender, address, role, is_verified, verification_code) " +
+               "VALUES (:username, :password, :fullname, :email, :phoneNumber, :gender, :address, :role, :verified, :verificationCode)")
     @GetGeneratedKeys("id")
     long insert(@BindBean User user);
 
     @Override
-    @SqlUpdate("UPDATE user SET username = :username, password = :password, fullname = :fullname, " +
-               "email = :email, phoneNumber = :phoneNumber, gender = :gender, address = :address, role = :role " +
+    @SqlUpdate("UPDATE user SET " +
+               "username = :username, " +
+               "password = :password, " +
+               "fullname = :fullname, " +
+               "email = :email, " +
+               "phoneNumber = :phoneNumber, " +
+               "gender = :gender, " +
+               "address = :address, " +
+               "role = :role, " +
+               "is_verified = :verified, " +
+               "verification_code = :verificationCode " +
                "WHERE id = :id")
     void update(@BindBean User user);
 
